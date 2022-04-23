@@ -1,0 +1,215 @@
+
+body{
+    background-color:aliceblue;
+}
+
+.navbar{
+    background-color: aliceblue;
+}
+.topbar{
+    width:100%;
+    height: 40vh;
+    background-image: url('./images/dancing.jpg');
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.festlogo{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+.topcontainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige; 
+    font-size: 34px;
+    width: 80%;
+    height: 70%;
+}
+
+
+.depts{
+    display: flex;
+    width: 90%;
+    margin: 2% auto;
+    flex-wrap: wrap;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.branches{
+    margin: 2%;
+}
+
+.branches:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.listofevents{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.eventbtns{
+    text-align: center;
+}
+
+.logos{
+    border-radius: 50%;
+    width: 40px;
+    height: 40%;
+}
+
+.reg{
+    width: 70%;
+    margin: 2% auto;
+}
+.registerbody{
+    margin: 3% auto;
+    width: 70%;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.registeritems{
+    margin-left: 12px;
+    width: 85%;
+}
+.refbtn{
+    display: flex;
+}
+
+.text{
+    font-size: 24px;
+}
+.registerend{
+    display: flex;
+    
+}
+.rules{
+    margin:2% auto;
+    border:2px solid;
+}
+
+.footersections{
+    border: 1px solid #ccc;
+    width: 24%;
+    margin: 2px 4px;
+}
+
+.footersections:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.footerbody{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.base{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    width: 90%;
+}
+
+.base > div {
+    margin: 2%;
+    cursor: pointer;
+}
+
+.receipt{
+    width: 590px;
+    margin: 2% auto;
+    border: 1px solid;
+}
+table{
+  margin: 8px;
+}
+.participantdetails{
+    width: 90%;
+}
+.topcontainer2{
+    display: flex;
+}
+.vitslogo{
+    height: 57px;
+    width: 50px;
+    border-radius: 50%;
+}
+.devdetails{
+    float: right;
+    font-size: 22px;
+    color: black;
+    font-weight: 500;
+}
+.socialmedia{
+    font-size: 26px;
+    color: black;
+}
+
+.socialmedia:hover{
+    cursor: pointer;
+    color: blue;
+}
+
+.querymail{
+    font-size: 26px;
+    text-align: center;
+}
+.confirmation{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.eventrules{
+    display: flex;
+    flex-wrap: wrap;
+}
+.moneyrules{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    margin: 6px;
+    padding: 12px;
+    width: 32%;
+}
+.brochure{
+    margin: 2% auto;
+}
+@media screen and (max-width:480px){
+    .footersections{
+        width: 100%;
+    }
+    .reg{
+        width: 95%;
+    }
+    .registerbody{
+        width: 100%;
+    }
+    .devdetails{
+        font-size: 17px;
+        font-weight: bold;
+        margin-left: 5px;
+        color: black;
+    }
+    .querymail{
+        font-size: 15px;
+        text-align: left;
+    }
+    .socialmedia{
+        font-size: 16px;
+    }
+    .eventrules{
+        align-items: center;
+        justify-content: center;
+    }  
+    .moneyrules{
+        width: 80%;
+    }
+
+}
