@@ -211,5 +211,8 @@ table{
     .moneyrules{
         width: 80%;
     }
+    .confirmation{
+        box-shadow: none;
+    }
 
 }
