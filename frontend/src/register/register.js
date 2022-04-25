@@ -249,8 +249,12 @@ class Register extends Component {
         flag:true
       })
     }
+    else{
+      this.setState({
+        load:true
+      })
   }
-
+}
   pdfGenerate =() => {
     var doc = new jsPDF('p','pt','a4');
     doc.html(document.querySelector("#receipt2"),{
@@ -262,7 +266,11 @@ class Register extends Component {
           count +=1
         }
         if(count === 12){
-          pdf.save('receipt.pdf')
+          try {
+            pdf.save('receipt.pdf')
+          } catch (error) {
+            alert(`${error} : Please try clicking download pdf button again`)
+          }
         }
       }
       
@@ -400,7 +408,7 @@ class Register extends Component {
             <label for="exampleFormControlInput1" class="form-label my-2 text">Transaction Reference Number</label>
             <div className='refbtn'>
                         <button className='btn btn-warning' style={{ marginRight: '4%' }}>DUI</button>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter your reference number last 7 digits" onChange={this.changerefno} />
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter last 7 digits of DUI number" onChange={this.changerefno} />
             </div>
         </div>
         <div className='text-danger'>{this.state.refnoerr}</div>
@@ -409,7 +417,7 @@ class Register extends Component {
      <input type="submit" class="btn btn-info mx-4 my-4" value="Register" onClick={this.onSubmit} />
      <Link to='/' style={{ textDecoration: 'none' }}><button type="button" class="btn btn-danger my-4">Back to Home</button></Link>
     </div>  
-    {this.state.load && <div className='text-success'>Loading...Please Wait</div>}
+    {this.state.load && <div className='text-danger'>*Please fill all the fields</div>} 
         </div>
       </div>
       </form>}
@@ -490,7 +498,7 @@ class Register extends Component {
             </div>}
             {this.state.msg && <div>
               <div class="container confirmation">
-              <h1 className='text-success display-2'>Registration Successful!!</h1>
+              <h1 className='text-success display-2 text-center'>Registration Successful!!</h1>
               <div id='receipt2' className='receipt'><br/>
               <div>
       <div className="container-fluid topcontainer2">
@@ -563,7 +571,9 @@ class Register extends Component {
               <button className='btn btn-secondary text-center mx-2' onClick={this.pdfGenerate} >Download Receipt</button>
               <Link to='/' style={{ textDecoration: 'none' }}><button type="button" class="btn btn-primary my-4">Back to Home</button></Link>
               </div>
-              <div className='text-danger text-center'>* Click on 'Download Pdf' button and don't forget to bring that hardcopy while coming to the event</div>
+              <div className='text-danger text-center'>* Click on 'Download Receipt' button and pdf will be automatically gets downloaded</div>
+              <div className='text-danger text-center'>*Check your downloads in your device after clicking that button</div>
+              <div className='text-danger text-center'>**Bring the hardcopy of downloaded pdf while coming to the event**</div>
               </div>
               </div>}
       </div>
